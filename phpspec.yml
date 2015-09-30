@@ -1,7 +1,7 @@
 suites:
     main:
-        namespace: Kwiki\Core
-        psr4_prefix: Kwiki\Core
+        namespace: Kwiki
+        psr4_prefix: Kwiki
         src_path: src
         spec_path: ./tests
 

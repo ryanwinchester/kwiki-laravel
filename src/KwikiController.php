@@ -1,6 +1,6 @@
 <?php
 
-namespace Kwiki\Core;
+namespace Kwiki;
 
 use Illuminate\Routing\Controller;
 use Pagemark\Pagemark;
@@ -30,12 +30,14 @@ class KwikiController extends Controller
 
     /**
      * @param Pagemark $pagemark
+     * @param string $kwikiPath
+     * @param string $kwikiView
      */
-    public function __construct(Pagemark $pagemark)
+    public function __construct(Pagemark $pagemark, $kwikiPath, $kwikiView)
     {
         $this->pagemark = $pagemark;
-        $this->kwikiPath = $kwikiPath = 'kwiki';
-        $this->kwikiView = $kwikiView = 'kwiki.page';
+        $this->kwikiPath = $kwikiPath;
+        $this->kwikiView = $kwikiView;
     }
 
     /**

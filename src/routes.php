@@ -1,5 +1,7 @@
 <?php
 
+// I tested with a for loop and that works fine,
+// but I prefer the simplicity of this this.
 $router->get('/', [
     'uses' => 'KwikiController@makePage',
     'as'   => 'kwiki.index'

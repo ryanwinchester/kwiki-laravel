@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Kwiki\\Core\\": "src/"
+            "Kwiki\\": "src/"
         }
     },
     "autoload-dev": {

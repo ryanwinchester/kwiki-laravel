@@ -1,10 +1,9 @@
 <?php
 
-namespace spec\Kwiki\Core;
+namespace spec\Kwiki;
 
-use Illuminate\Support\ServiceProvider;
-use Illuminate\View\Factory as View;
-use Laravel\Lumen\Application;
+use Illuminate\Foundation\Application;
+use Kwiki\KwikiServiceProvider;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -18,14 +17,6 @@ class KwikiServiceProviderSpec extends ObjectBehavior
 
     function it_is_initializable()
     {
-        $this->shouldHaveType('Kwiki\Core\KwikiServiceProvider');
-    }
-
-    function it_loads_views()
-    {
-        $path = __DIR__.'/../resources/views';
-        $namespace = 'kwiki';
-
-        $this->boot();
+        $this->shouldHaveType(KwikiServiceProvider::class);
     }
 }
