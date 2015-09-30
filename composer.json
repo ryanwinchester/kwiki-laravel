@@ -1,0 +1,29 @@
+{
+    "name": "ryanwinchester/kwiki-laravel",
+    "description": "Quick wiki or blog with markdown files for laravel",
+    "keywords": ["wiki", "blog", "markdown", "laravel"],
+    "license": "Apache-2.0",
+    "type": "library",
+    "require": {
+        "illuminate/routing": "5.1.*",
+        "illuminate/support": "5.1.*",
+        "php": ">=5.5.9",
+        "ryanwinchester/pagemark": "^0.5"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kwiki\\Core\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}

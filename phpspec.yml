@@ -1,0 +1,8 @@
+suites:
+    main:
+        namespace: Kwiki\Core
+        psr4_prefix: Kwiki\Core
+        src_path: src
+        spec_path: ./tests
+
+formatter.name: pretty
