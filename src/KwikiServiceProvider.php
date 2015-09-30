@@ -48,13 +48,13 @@ class KwikiServiceProvider extends ServiceProvider
         // Config publishing
         $this->publishes([
             __DIR__.'/../config/kwiki.php' => config_path('kwiki.php'),
-        ]);
+        ], 'config');
 
         // Views
         $this->loadViewsFrom(__DIR__.'/../resources/views', 'kwiki');
         $this->publishes([
             __DIR__.'/../resources/views' => base_path('resources/views/vendor/kwiki'),
-        ]);
+        ], 'views');
 
         // Public assets
         $this->publishes([
@@ -65,6 +65,6 @@ class KwikiServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__.'/../resources/translations', 'kwiki');
         $this->publishes([
             __DIR__.'/../resources/translations' => base_path('resources/lang/vendor/kwiki'),
-        ]);
+        ], 'translations');
     }
 }

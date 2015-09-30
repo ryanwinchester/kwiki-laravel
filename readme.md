@@ -26,8 +26,43 @@ The views are blade templates and located at `resources/views/vendor/kwiki` and 
  
 Using composer:
  
-```
+```bash
 composer require "ryanwinchester/kwiki: ^0.1"
+```
+
+## Publishing config and other assets
+
+There is a good chance you wil want to override some default things. If that is the case there are a couple of 
+way you can go about it. First, you could publish *all the things*:
+
+```bash
+php artisan vendor:publish --provider="Kwiki\KwikiServiceProvider" --force
+```
+
+Or you could publish things individually:
+
+Config:
+
+```bash
+php artisan vendor:publish --provider="Kwiki\KwikiServiceProvider" --tag="config" --force
+```
+
+Views:
+
+```bash
+php artisan vendor:publish --provider="Kwiki\KwikiServiceProvider" --tag="views" --force
+```
+
+Public assets:
+
+```bash
+php artisan vendor:publish --provider="Kwiki\KwikiServiceProvider" --tag="public" --force
+```
+
+Translations:
+
+```bash
+php artisan vendor:publish --provider="Kwiki\KwikiServiceProvider" --tag="translations" --force
 ```
 
 ## Powered by
